@@ -1,0 +1,356 @@
+/*--------------------------------------------------------------*/
+/*------------------ **Standard Style for MNS** ----------------*/
+/*--------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+@font-face {
+	font-family: 'mnsicons';
+	src:url('../fonts/mnsicons/mnsicons.eot?vye4xx');
+	src:url('../fonts/mnsicons/mnsicons.eot?vye4xx#iefix') format('embedded-opentype'),
+		url('../fonts/mnsicons/mnsicons.ttf?vye4xx') format('truetype'),
+		url('../fonts/mnsicons/mnsicons.woff?vye4xx') format('woff'),
+		url('../fonts/mnsicons/mnsicons.svg?vye4xx#mnsicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Resets */
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+		background-color: #3672d7;
+  		text-align: center;
+  		font-family: 'Roboto', sans-serif;
+  		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+}
+
+.mns-header__present {
+	font-size: 1.2em;
+	font-weight: 700;
+	position: relative;
+	z-index: 100;
+	display: block;
+	padding-top:50px;
+	padding-left:20px;
+	padding-right:20px;
+	text-align:left;
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+	color: #fefefe;
+}
+
+.mns-tooltip:after {
+	font-size: 50%;
+	font-size: 75%;
+	position: relative;
+	top: -8px;
+	left: 4px;
+	width: 30px;
+	height: 30px;
+}
+
+.mns-tooltip:hover:before {
+	content: attr(data-content);
+	font-size: 70%;
+	font-weight: 700;
+	line-height: 1.2;
+	position: absolute;
+	left: auto;
+	margin-left: 4px;
+	padding: 0.8em 1em;
+	text-align: left;
+	text-indent: 0;
+	letter-spacing: 0;
+	text-transform: none;
+	color: #fff;
+	background: #1a448b;
+	-moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  	box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+}
+
+[class^="mns-"]:after, [class*=" mns-"]:after {
+	font-family: 'mnsicons';
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	text-align: center;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	speak: none;
+}
+
+.mns-code:after {
+	content: "\e905";
+}
+.mns-copyright:after {
+	content: "\e904";
+}
+.mns-help_outline:after {
+	content: "\e900";
+}
+.mns-code2:after {
+	content: "\e908";
+}
+.mns-file-code-o:after {
+	content: "\e909";
+}
+.mns-paint-brush:after {
+	content: "\e90a";
+}
+.mns-github:after {
+	content: "\e906";
+}
+.mns-heart:after {
+	content: "\e907";
+}
+.mns-arrow-right:after {
+	content: "\e902";
+}
+.mns-download:after {
+	content: "\e903";
+}
+.mns-arrow-left:after {
+	content: "\e901";
+}
+
+.navigation {
+	float: right;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #fefefe;
+	transition: all 0.2s ease;
+}
+
+.navigation a:hover {
+	color: #1a448b;
+}
+
+footer {
+	bottom:0px;
+	height:50px;
+	width:100%;
+	margin-top:20px;
+	position:fixed;
+}
+
+.cp-details {
+	float:right;
+	margin-right:80px;
+	line-height:2.5;
+	color:#fefefe;
+}
+
+.cp-image {
+	background:url(../img/mn_logo.svg);
+	width:40px;
+	height:40px;
+	position:absolute;
+	margin-right:20px;
+	margin-left:10px;
+	border-radius:50%;
+	-moz-box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 6px 10px 0 rgba(0,0,0,0.3);
+}
+
+@media only screen and (max-width: 360px) {
+	.cp-details {
+    margin-right: 72px;
+    font-size: 13.3px;
+}
+}
+
+/* ---------------------------- **Password Strength Checker** ----------------------------- */
+
+#details {
+  padding-top: 7em;
+  text-align: left;
+  text-align: center;
+  width:100%;
+  margin: 0;
+}
+
+.left {
+	width:50%;
+	float:left;
+}
+
+.right {
+	width:50%;
+	float:left;
+}
+
+#details h2 {
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.2em;
+  color: #96bdff;
+  font-weight: 700;
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  padding-bottom: 0.75em;
+}
+
+#details .input-group-1 {
+  width: 100%;
+  margin-bottom: 0em;
+}
+
+#details .contact-info {
+  min-width: 400px;
+  float:right;
+}
+
+#details label {
+  text-align: left;
+  display: block;
+  color: white;
+  font-weight: 300;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 1.6em 0 0.3em 0.2em;
+}
+
+#details input[type="text"], #details input[type="password"] {
+  text-align: left;
+  font-family: 'Lato';
+  background-color: rgba(26, 68, 139, 0.3);
+  font-weight: 300;
+  border: 0px solid rgba(132, 178, 255, 0.67);
+  color: white;
+  font-size: 1.3em;
+  box-sizing: border-box;
+  padding-left: 0.75em;
+  height: 2.2em;
+  width: 100%;
+  border-radius: 3px;
+  outline: none;
+}
+
+
+#details #password-strength-block {
+  color:#212121;
+  min-width: 400px;
+  max-width: 400px;
+  display:none;
+  margin-top:2em;
+  margin-left:2em;
+  float:left;
+  background:#fefefe;
+  border-radius:2px;
+   -ms-transform: scale(1.04, 1.04);
+  /* IE 9 */
+  -webkit-transform: scale(1.04, 1.04);
+  /* Safari */
+  transform: scale(1.04, 1.04);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+}
+
+#password-strength-block:after {
+	right: 100%;
+	top: 25%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(254, 254, 254, 0);
+	border-right-color: #fefefe;
+	border-width: 10px;
+	margin-top: -10px;
+}
+
+.feedback-block {
+	padding:15px;
+	width:100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+meter {
+		/* Reset the default appearance */		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		margin: 0 auto 1em;
+		width: 100%;
+		height: .5em;
+		border-radius:2px;
+		/* Applicable only to Firefox */		
+		background: none;
+		background-color: rgba(0, 0, 0, 0.1);
+}
+
+meter::-webkit-meter-bar {
+		background: none;
+		background-color: rgba(0, 0, 0, 0.1);
+}
+
+meter[value="1"]::-webkit-meter-optimum-value {
+		background: #b71c1c;
+}
+
+meter[value="2"]::-webkit-meter-optimum-value {
+		background: #f44336;
+}
+
+meter[value="3"]::-webkit-meter-optimum-value {
+		background: #ffeb3b;
+}
+
+meter[value="4"]::-webkit-meter-optimum-value {
+		background: #ff9800;
+}
+
+meter[value="5"]::-webkit-meter-optimum-value {
+		background: #4caf50;
+}
+
+meter[value="1"]::-moz-meter-bar {
+		background: #b71c1c;
+}
+
+meter[value="2"]::-moz-meter-bar {
+		background: #f44336;
+}
+
+meter[value="3"]::-moz-meter-bar {
+		background: #ffeb3b;
+}
+
+meter[value="4"]::-moz-meter-bar {
+		background: #ff9800;
+}
+
+meter[value="5"]::-moz-meter-bar {
+		background: #4caf50;
+}
+
+.feedback-block {
+		color: #9ab;
+		font-size: 90%;
+		padding: 0 .25em;
+		font-family: 'Roboto', sans-serif;
+		margin-top: 1em;
+}
